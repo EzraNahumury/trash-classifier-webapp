@@ -1,6 +1,3 @@
-# trash-classifier-webapp
-
-
 # 🗑️ Trash Classifier Web App
 
 Aplikasi web berbasis **Flask + TensorFlow Lite + SQLite** untuk:
@@ -15,8 +12,8 @@ Aplikasi web berbasis **Flask + TensorFlow Lite + SQLite** untuk:
 ## 🚀 Fitur Utama
 
 ### 👤 User
-- **Login / Signup / Logout**  
-- **Home**: menu utama untuk memilih fitur.  
+- **Login / Signup / Logout**
+- **Home**: menu utama untuk memilih fitur.
 - **Klasifikasi Sampah**: upload gambar → sistem memprediksi jenis sampah menggunakan model TFLite.  
   - Reward poin otomatis diberikan sesuai kategori.  
   - Hasil disimpan ke database (`records`).  
@@ -39,24 +36,40 @@ Aplikasi web berbasis **Flask + TensorFlow Lite + SQLite** untuk:
 ---
 
 ## 📂 Struktur Project
+
+```plaintext
 project/
-│── app.py # Main Flask app
-│── init_db.py # Script untuk membuat database & tabel
-│── trash.db # SQLite database (terbuat setelah init_db dijalankan)
-│── model_fix.tflite # Model klasifikasi TFLite
-│── static/
-│ └── uploads/ # Folder untuk menyimpan gambar yang diupload
-│── templates/
-│ ├── login.html
-│ ├── signup.html
-│ ├── home.html
-│ ├── classify.html
-│ ├── records.html
-│ ├── admin.html
-│ ├── admin_records.html
-│ └── admin_users.html
+│── app.py                # Main Flask app
+│── init_db.py            # Script untuk membuat database & tabel
+│── trash.db              # SQLite database (terbuat setelah init_db dijalankan)
+│── model_fix.tflite      # Model klasifikasi TFLite
+│
+├── static/
+│   └── uploads/          # Folder untuk menyimpan gambar yang diupload
+│
+├── templates/
+│   ├── login.html
+│   ├── signup.html
+│   ├── home.html
+│   ├── classify.html
+│   ├── records.html
+│   ├── admin.html
+│   ├── admin_records.html
+│   └── admin_users.html
+│
 └── README.md
 
+
+---
+## ⚙️ Menjalankan Code
+
+Jalankan perintah berikut untuk memulai aplikasi:
+
+```bash
+python app.py
+
+Aplikasi akan berjalan di browser lokal pada alamat:
+👉 http://127.0.0.1:5000
 
 
 
