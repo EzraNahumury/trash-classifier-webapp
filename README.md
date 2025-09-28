@@ -58,7 +58,8 @@ project/
 └── README.md
 
 
-### 4. Jalankan Aplikasi
+
+## 4. Jalankan Aplikasi
 
 ```bash
 python app.py
