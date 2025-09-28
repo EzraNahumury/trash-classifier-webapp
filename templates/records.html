@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Riwayat Pencatatan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background: #f4f6f9;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        a {
+            text-decoration: none;
+            color: #3498db;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #bdc3c7;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background: #2c3e50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>📊 Riwayat Klasifikasi</h1>
+    <p><a href="/home">⬅️ Kembali ke Home</a></p>
+
+    <p><b>Total Poin:</b> {{ total_poin }}</p>
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Waktu Klasifikasi</th>
+            <th>Kategori</th>
+            <th>Reward Poin</th>
+        </tr>
+        {% for r in records %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ r.waktu }}</td>
+            <td>{{ r.kategori }}</td>
+            <td>{{ r.poin }}</td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="4">Belum ada data klasifikasi</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

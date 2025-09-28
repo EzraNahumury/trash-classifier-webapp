@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Semua Record</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; background: #f4f6f9; }
+        h1 { color: #2c3e50; }
+        h2 { margin-top: 40px; color: #34495e; }
+        table { border-collapse: collapse; width: 100%; margin-top: 15px; margin-bottom: 30px; }
+        table, th, td { border: 1px solid #bdc3c7; }
+        th, td { padding: 8px; text-align: center; }
+        th { background: #2c3e50; color: white; }
+        a { text-decoration: none; color: #3498db; }
+    </style>
+</head>
+<body>
+    <h1>📑 Semua Record</h1>
+    <p><a href="/admin">⬅️ Kembali ke Dashboard</a></p>
+
+    <h2>1. Semua Pencatatan</h2>
+    <table>
+        <tr><th>No</th><th>User ID</th><th>Waktu</th><th>Kategori</th><th>Poin</th></tr>
+        {% for r in all_records %}
+        <tr>
+            <td>{{ loop.index }}</td><td>{{ r.user_id }}</td><td>{{ r.waktu }}</td><td>{{ r.kategori }}</td><td>{{ r.poin }}</td>
+        </tr>
+        {% else %}<tr><td colspan="5">Tidak ada data</td></tr>{% endfor %}
+    </table>
+
+    <h2>2. Pencatatan Kertas</h2>
+    <table>
+        <tr><th>No</th><th>User ID</th><th>Waktu</th><th>Kategori</th><th>Poin</th></tr>
+        {% for r in kertas %}
+        <tr>
+            <td>{{ loop.index }}</td><td>{{ r.user_id }}</td><td>{{ r.waktu }}</td><td>{{ r.kategori }}</td><td>{{ r.poin }}</td>
+        </tr>
+        {% else %}<tr><td colspan="5">Tidak ada data</td></tr>{% endfor %}
+    </table>
+
+    <h2>3. Pencatatan Plastik</h2>
+    <table>
+        <tr><th>No</th><th>User ID</th><th>Waktu</th><th>Kategori</th><th>Poin</th></tr>
+        {% for r in plastik %}
+        <tr>
+            <td>{{ loop.index }}</td><td>{{ r.user_id }}</td><td>{{ r.waktu }}</td><td>{{ r.kategori }}</td><td>{{ r.poin }}</td>
+        </tr>
+        {% else %}<tr><td colspan="5">Tidak ada data</td></tr>{% endfor %}
+    </table>
+
+    <h2>4. Pencatatan Kaca</h2>
+    <table>
+        <tr><th>No</th><th>User ID</th><th>Waktu</th><th>Kategori</th><th>Poin</th></tr>
+        {% for r in kaca %}
+        <tr>
+            <td>{{ loop.index }}</td><td>{{ r.user_id }}</td><td>{{ r.waktu }}</td><td>{{ r.kategori }}</td><td>{{ r.poin }}</td>
+        </tr>
+        {% else %}<tr><td colspan="5">Tidak ada data</td></tr>{% endfor %}
+    </table>
+
+    <h2>5. Pencatatan Kardus</h2>
+    <table>
+        <tr><th>No</th><th>User ID</th><th>Waktu</th><th>Kategori</th><th>Poin</th></tr>
+        {% for r in kardus %}
+        <tr>
+            <td>{{ loop.index }}</td><td>{{ r.user_id }}</td><td>{{ r.waktu }}</td><td>{{ r.kategori }}</td><td>{{ r.poin }}</td>
+        </tr>
+        {% else %}<tr><td colspan="5">Tidak ada data</td></tr>{% endfor %}
+    </table>
+
+    <h2>6. Pencatatan Logam</h2>
+    <table>
+        <tr><th>No</th><th>User ID</th><th>Waktu</th><th>Kategori</th><th>Poin</th></tr>
+        {% for r in logam %}
+        <tr>
+            <td>{{ loop.index }}</td><td>{{ r.user_id }}</td><td>{{ r.waktu }}</td><td>{{ r.kategori }}</td><td>{{ r.poin }}</td>
+        </tr>
+        {% else %}<tr><td colspan="5">Tidak ada data</td></tr>{% endfor %}
+    </table>
+
+    <h2>7. Pencatatan Residu</h2>
+    <table>
+        <tr><th>No</th><th>User ID</th><th>Waktu</th><th>Kategori</th><th>Poin</th></tr>
+        {% for r in residu %}
+        <tr>
+            <td>{{ loop.index }}</td><td>{{ r.user_id }}</td><td>{{ r.waktu }}</td><td>{{ r.kategori }}</td><td>{{ r.poin }}</td>
+        </tr>
+        {% else %}<tr><td colspan="5">Tidak ada data</td></tr>{% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Semua User</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; background: #f4f6f9; }
+        h1 { color: #2c3e50; }
+        table { border-collapse: collapse; width: 100%; margin-top: 15px; }
+        table, th, td { border: 1px solid #bdc3c7; }
+        th, td { padding: 8px; text-align: center; }
+        th { background: #2c3e50; color: white; }
+    </style>
+</head>
+<body>
+    <h1>👥 Semua User</h1>
+    <p><a href="/admin">⬅️ Kembali ke Dashboard</a></p>
+    <table>
+        <tr>
+            <th>ID</th><th>Username</th><th>Password</th>
+        </tr>
+        {% for u in users %}
+        <tr>
+            <td>{{ u.id }}</td>
+            <td>{{ u.username }}</td>
+            <td>{{ u.password }}</td>
+        </tr>
+        {% else %}
+        <tr><td colspan="3">Tidak ada user</td></tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
