@@ -39,3 +39,24 @@ Aplikasi web berbasis **Flask + TensorFlow Lite + SQLite** untuk:
 ---
 
 ## 📂 Struktur Project
+project/
+│── app.py # Main Flask app
+│── init_db.py # Script untuk membuat database & tabel
+│── trash.db # SQLite database (terbuat setelah init_db dijalankan)
+│── model_fix.tflite # Model klasifikasi TFLite
+│── static/
+│ └── uploads/ # Folder untuk menyimpan gambar yang diupload
+│── templates/
+│ ├── login.html
+│ ├── signup.html
+│ ├── home.html
+│ ├── classify.html
+│ ├── records.html
+│ ├── admin.html
+│ ├── admin_records.html
+│ └── admin_users.html
+└── README.md
+
+
+
+
