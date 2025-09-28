@@ -59,18 +59,5 @@ project/
 
 
 
-## 4. Jalankan Aplikasi
-
-```bash
-python app.py
-```
-
-Aplikasi akan berjalan di browser lokal:
-
-```
-http://127.0.0.1:5000
-```
-
----
 
 
